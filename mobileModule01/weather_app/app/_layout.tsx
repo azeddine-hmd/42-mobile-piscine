@@ -3,7 +3,7 @@ import 'expo-dev-client';
 import { ThemeProvider as NavThemeProvider } from '@react-navigation/native';
 
 import { StatusBar } from "expo-status-bar";
-import { Tabs } from "expo-router";
+import { Stack } from "expo-router";
 
 import { useColorScheme, useInitialAndroidBarSync } from "~/lib/useColorScheme";
 import { NAV_THEME } from '~/theme';
@@ -24,9 +24,9 @@ export default function RootLayout() {
         style={isDarkColorScheme ? 'light' : 'dark'}
       />
       <NavThemeProvider value={NAV_THEME[colorScheme]}>
-        <Tabs>
-          <Tabs.Screen name="current"/>
-        </Tabs>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
       </NavThemeProvider>
     </>
   );
