@@ -1,16 +1,18 @@
-import { View } from "react-native";
-import { Container } from "~/components/Container";
-import { useHeaderSearchBar } from "~/lib/useHeaderSearchBar";
-import { Text } from "~/components/nativewindui/Text";
+import { View } from 'react-native';
+
+import { Container } from '~/components/Container';
+import { Text } from '~/components/nativewindui/Text';
+import { useHeaderSearchBarCustom } from '~/lib/useHeaderSearchBarCustom';
 
 export default function WeeklyTab() {
-    const searchValue = useHeaderSearchBar();
+  const searchValue = useHeaderSearchBarCustom();
 
-    return (
-        <Container>
-            <View className="flex-1 justify-center items-center">
-                <Text>Weekly Window</Text>
-            </View>
-        </Container>
-    );
+  return (
+    <Container>
+      <View className="flex-1 items-center justify-center">
+        <Text>Weekly Window</Text>
+        <Text>{searchValue}</Text>
+      </View>
+    </Container>
+  );
 }

@@ -2,10 +2,10 @@ import '../global.css';
 import 'expo-dev-client';
 import { ThemeProvider as NavThemeProvider } from '@react-navigation/native';
 
-import { StatusBar } from "expo-status-bar";
-import { Stack } from "expo-router";
+import { StatusBar } from 'expo-status-bar';
+import { Stack } from 'expo-router';
 
-import { useColorScheme, useInitialAndroidBarSync } from "~/lib/useColorScheme";
+import { useColorScheme, useInitialAndroidBarSync } from '~/lib/useColorScheme';
 import { NAV_THEME } from '~/theme';
 
 export {
