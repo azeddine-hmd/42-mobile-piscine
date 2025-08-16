@@ -18,7 +18,7 @@ export function SearchInput({
   const onCloseInput = () => {
     onChangeText('');
     inputRef.current?.blur();
-	Keyboard.dismiss();
+    Keyboard.dismiss();
   };
 
   useEffect(() => {

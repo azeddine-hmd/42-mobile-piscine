@@ -12,7 +12,13 @@ export function useHeaderSearchBarCustom(props: SearchBarProps = {}) {
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
-      headerTitle: () => <SearchInput value={text} onChangeText={setText} onSubmitEditing={(e) => setSearch(e.nativeEvent.text)} />,
+      headerTitle: () => (
+        <SearchInput
+          value={text}
+          onChangeText={setText}
+          onSubmitEditing={(e) => setSearch(e.nativeEvent.text)}
+        />
+      ),
     });
   }, [navigation, colorScheme, colors.foreground, colors.primary, colors.grey, props]);
 
