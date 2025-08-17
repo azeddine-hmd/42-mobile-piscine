@@ -46,7 +46,8 @@
     "react-native-uitextview": "2.0.0-rc.10",
     "react-native-web": "^0.20.0",
     "tailwind-merge": "^2.2.1",
-    "zustand": "^5.0.7"
+    "zustand": "^5.0.7",
+    "expo-location": "~18.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
