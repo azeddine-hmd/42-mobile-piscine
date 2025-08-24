@@ -7,6 +7,7 @@ import { Stack } from 'expo-router';
 
 import { useColorScheme, useInitialAndroidBarSync } from '~/lib/useColorScheme';
 import { NAV_THEME } from '~/theme';
+import useCheckLocationPermission from '~/lib/location/useCheckLocationPermission';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -16,6 +17,7 @@ export {
 export default function RootLayout() {
   useInitialAndroidBarSync();
   const { colorScheme, isDarkColorScheme } = useColorScheme();
+  useCheckLocationPermission();
 
   return (
     <>

@@ -8,8 +8,13 @@ module.exports = defineConfig([
     ignores: ['dist/*'],
   },
   {
+    plugins: {
+      prettier: require('eslint-plugin-prettier'),
+    },
     rules: {
       'react/display-name': 'off',
+      'prettier/prettier': 'warn',
     },
   },
+  require('eslint-config-prettier'),
 ]);
